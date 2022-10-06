@@ -36,37 +36,42 @@ git clone https://github.com/tazbin/LRU-caching-class.git ./LRU-cache
 2. Extract the zip file, navigate into it & copy the folder to your desired directory
 
 ## Running the app:
-To build docker image
+1. To build **docker image**
 ```bash
 docker compose build --no-cache
 ```
 
-To run he containers in detached mode (wait for a while for database connecton)
+2. To run the **containers** in detached mode (wait for a while for database connection)
 ```bash
 docker compose up -d
 ```
 
-To view running containers
+3. To view running **containers**
 ```bash
 docker container ps
 ```
 
-To view API logs
+4. To view **API logs**
 ```bash
 docker logs lru-cache-c
 ```
 
-To run tests, first enter within the API container
-```bash
-docker exec -it lru-cache-c /bin/sh
-```
-Then, run this command to execute tests
-```bash
-npm test
-```
-To exit from API container, press ```CTRL + D``` on terminal
+5. To **run tests**, first enter within the API container
+   - on windows CMD (not switching to bash)
+      ```bash
+      docker exec -it lru-cache-c /bin/sh
+      ```
+   - on windows CMD (not switching to bash)
+      ```bash
+      docker exec -it lru-cache-c //bin//sh
+      ```
+    now run **test command**
+    ```bash
+    npm test
+    ```
+6. To exit from **API container**, press <kbd>Ctrl</kbd>+<kbd>D</kbd> on terminal
 
-To stops the containers
+7. To **stop** the containers
 ```bash
 docker compose down
 ```
