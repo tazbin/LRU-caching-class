@@ -24,28 +24,40 @@
 **Testing framework**
 - [x] Jest
 
-## How to install & run:
-### Using Git (recommended)
+## Getting the app:
+#### Using Git (recommended)
 1. Navigate & open CLI into the directory where you want to put this project & Clone this project (will be cloned inside LRU-cache folder) using this command.
    
 ```bash
 git clone https://github.com/tazbin/LRU-caching-class.git ./LRU-cache
 ```
-### Using manual download ZIP
+#### Using manual download ZIP
 1. Download the repository
 2. Extract the zip file, navigate into it & copy the folder to your desired directory
 
-### Running the project
+## Running the app:
 Build the docker image
 
 ```bash
 docker build -t lru-node .
 ```
 
-Then run the project using
+Then run the docker container in detached mode
 
 ```bash
-docker run lru-node
+docker run -d --name lru-node-c lru-node 
+```
+To view the logs of the container
+```bash
+docker logs lru-node-c
+```
+To execute commands within the ```lru-node-c``` containers
+```bash
+docker exec -it lru-node-c /bin/sh
+```
+Now we can run our test within the ```lru-node-c``` container
+```bash
+npm test
 ```
 You'll see the ```LRUCache``` is implemented & the test cases have been executed resulting in the terminal as below
 
@@ -66,4 +78,12 @@ Tests:       5 passed, 5 total
 Snapshots:   0 total
 Time:        0.651 s
 Ran all test suites.
+```
+To stop the ```lru-node-c``` container
+```bash
+docker stop lru-node-c
+```
+To remove the ```lru-node-c``` container
+```bash
+docker rm lru-node-c
 ```
