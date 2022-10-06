@@ -1,20 +1,20 @@
 # LRU caching class implementation
 
-**LRU cache** is a data structure that removed the least recently used ```(key, value)``` pair from the cache & puts the most recently pair data at top/ begining of it. Thus it allows to access recently used data faster & easier. The least recently used pair is always stays at the bottom/ end and the most recently used pair is always stays at the top/ begining of this LRUCache.
+**LRU cache** is a data structure that removed the least recently used ```(key, value)``` pair from the cache & puts the most recent pair data at the top/beginning of it. Thus it allows to access recently used data faster & easier. The least recently used pair always stays at the bottom/ end and the most recently used pair always stays at the top/beginning of this LRUCache.
 
 ## Implementation:
 - ```LRUCache```
-  - A class named with it is implemeted which provies properties & methoods to implement this data structure
-  - Size of it must be initialized while declaring
+  - a class named with it is implemented which provides properties & methods to implement this data structure
+  - the size of it must be initialized while declaring
   
 - ```get(key)``` 
-  - returns the ```value``` of this key if this key exists in he LRUcache
-  - returns ```-1``` of this key if this key doesn't exists in he LRUcache
+  - returns the ```value``` of this key if this key exists in the LRUcache
+  - returns ```-1``` of this key if this key doesn't exist in the LRUcache
   - puts this ````(key, value)```` pair on top/ beginning of the LRUCache
 - ```put(key, value)``` 
-  - if this ```key``` exits, then it changes its ```value``` with new one & puts this ````(key, value)```` pair on top/ beginning of the LRUCache
-  - if this ```key``` doesn't exits, but the cache is full; then it deletes the least used ```(key, value)``` pair from bottom/ end & adds this new ```(key, value)``` pair on top/ begning of the LRUCache
-  - if this ```key``` doesn't exits and the cache is nlt full; then it just adds this new ```(key, value)``` pair on top/ begning of the LRUCache
+  - if this ```key``` exits, then it changes its ```value``` with the given new one & puts this ````(key, value)```` pair on top/ beginning of the LRUCache
+  - if this ```key``` doesn't exist, but the cache is full; then it deletes the least used ```(key, value)``` pair from the bottom/ end & adds this new ```(key, value)``` pair on top/beginning of the LRUCache
+  - if this ```key``` doesn't exist and the cache is not full; then it just adds this new ```(key, value)``` pair on top/beginning of the LRUCache
 
 ## Tech used:
 
@@ -32,7 +32,7 @@
 git clone https://github.com/tazbin/LRU-caching-class.git ./LRU-cache
 ```
 ### Using manual download ZIP
-1. Download repository
+1. Download the repository
 2. Extract the zip file, navigate into it & copy the folder to your desired directory
 
 ### Running the project
@@ -47,7 +47,7 @@ Then run the project using
 ```bash
 docker run lru-node
 ```
-You'll see the ```LRUCache``` is implemeted & the test cased has been been executed resulting in terminal as below
+You'll see the ```LRUCache``` is implemented & the test cases have been executed resulting in the terminal as below
 
 ```bash
 > lru-caching-class@1.0.0 test
