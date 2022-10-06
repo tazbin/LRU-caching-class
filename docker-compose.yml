@@ -1,0 +1,10 @@
+version: '3.9'
+
+services: 
+    # Node JS servcie
+    nodejs:
+        build: .
+        volumes: 
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+        container_name: lru-cache-c
