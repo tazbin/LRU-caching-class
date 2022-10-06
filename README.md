@@ -36,54 +36,38 @@ git clone https://github.com/tazbin/LRU-caching-class.git ./LRU-cache
 2. Extract the zip file, navigate into it & copy the folder to your desired directory
 
 ## Running the app:
-Build the docker image
-
+To build docker image
 ```bash
-docker build -t lru-node .
+docker compose build --no-cache
 ```
 
-Then run the docker container in detached mode
+To run he containers in detached mode (wait for a while for database connecton)
+```bash
+docker compose up -d
+```
 
+To view running containers
 ```bash
-docker run -d --name lru-node-c lru-node 
+docker container ps
 ```
-To view the logs of the container
+
+To view API logs
 ```bash
-docker logs lru-node-c
+docker logs lru-cache-c
 ```
-To execute commands within the ```lru-node-c``` containers
+
+To run tests, first enter within the API container
 ```bash
-docker exec -it lru-node-c /bin/sh
+docker exec -it lru-cache-c /bin/sh
 ```
-Now we can run our test within the ```lru-node-c``` container
+Then, run this command to execute tests
 ```bash
 npm test
 ```
-You'll see the ```LRUCache``` is implemented & the test cases have been executed resulting in the terminal as below
+To exit from API container, press ```CTRL + D``` on terminal
 
+To stops the containers
 ```bash
-> lru-caching-class@1.0.0 test
-> jest
+docker compose down
+```
 
-PASS ./app.test.js
-  LRU cache test suit
-    ✓ get(1) --> should return 1 (3 ms)
-    ✓ get(2) --> should return -1 (1 ms)
-    ✓ get(1) --> should return -1 (1 ms)
-    ✓ get(3) --> should return 3 (1 ms)
-    ✓ get(4) --> should return 4
-
-Test Suites: 1 passed, 1 total
-Tests:       5 passed, 5 total
-Snapshots:   0 total
-Time:        0.651 s
-Ran all test suites.
-```
-To stop the ```lru-node-c``` container
-```bash
-docker stop lru-node-c
-```
-To remove the ```lru-node-c``` container
-```bash
-docker rm lru-node-c
-```
