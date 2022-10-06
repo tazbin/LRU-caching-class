@@ -1,4 +1,4 @@
-const LRUCache = require('./app');
+const LRUCache = require('../app');
 
 describe('LRU cache test suit', () => {
 
@@ -30,7 +30,7 @@ describe('LRU cache test suit', () => {
         let lRUCache = new LRUCache(2);
         lRUCache.put(1, 1);
         lRUCache.put(2, 2);
-        lRUCache.get(1);
+        lRUCache.get(10);
         lRUCache.put(3, 3);
         lRUCache.get(2);
         lRUCache.put(4, 4);
