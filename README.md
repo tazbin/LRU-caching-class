@@ -61,9 +61,13 @@
       ```bash
       docker exec -it lru-cache-c /bin/sh
       ```
-   - on windows CMD (not switching to bash)
+   - on windows CMD (after switching to bash)
       ```bash
       docker exec -it lru-cache-c //bin//sh
+      ```
+      or
+      ```bash
+     winpty docker exec -it lru-cache-c //bin//sh
       ```
     now run **test command**
     ```bash
