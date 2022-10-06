@@ -28,33 +28,33 @@
 #### Using Git (recommended)
 1. Navigate & open CLI into the directory where you want to put this project & Clone this project (will be cloned inside LRU-cache folder) using this command.
    
-```bash
-git clone https://github.com/tazbin/LRU-caching-class.git ./LRU-cache
-```
+      ```bash
+      git clone https://github.com/tazbin/LRU-caching-class.git ./LRU-cache
+      ```
 #### Using manual download ZIP
 1. Download the repository
 2. Extract the zip file, navigate into it & copy the folder to your desired directory
 
 ## Running the app:
 1. To build **docker image**
-```bash
-docker compose build --no-cache
-```
+    ```bash
+    docker compose build --no-cache
+    ```
 
 2. To run the **containers** in detached mode (wait for a while for database connection)
-```bash
-docker compose up -d
-```
+    ```bash
+    docker compose up -d
+    ```
 
 3. To view running **containers**
-```bash
-docker container ps
-```
+    ```bash
+    docker container ps
+    ```
 
 4. To view **API logs**
-```bash
-docker logs lru-cache-c
-```
+    ```bash
+    docker logs lru-cache-c
+    ```
 
 5. To **run tests**, first enter within the API container
    - on windows CMD (not switching to bash)
@@ -72,7 +72,7 @@ docker logs lru-cache-c
 6. To exit from **API container**, press <kbd>Ctrl</kbd>+<kbd>D</kbd> on terminal
 
 7. To **stop** the containers
-```bash
-docker compose down
-```
+    ```bash
+    docker compose down
+    ```
 
