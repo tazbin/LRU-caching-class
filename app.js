@@ -3,7 +3,7 @@ class LRUCache {
 
     constructor(capacity) {
         this.capacity = capacity; // size of the cache
-        this.map = new Map(); // cache memory
+        this.map = new Map(); // cache memoryy
     }
 
     
