@@ -6,6 +6,8 @@ class LRUCache {
         this.map = new Map(); // cache memory
     }
 
+    // do me a pr review
+
     
     get(key) {
 
@@ -31,6 +33,8 @@ class LRUCache {
 
     put(key, value) {
 
+        // do me a pr review too
+
         if (this.map.has(key)) { // pair exists
 
             // delete this pair
@@ -50,3 +54,5 @@ class LRUCache {
 };
 
 module.exports = LRUCache
+
+// here please as well...
